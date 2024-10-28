@@ -13,15 +13,14 @@ bot.start((ctx) => {
     const urlSent = `${web_link}?ref=${startPayload}`;
     const user = ctx.message.from;
     const userName = user.username ? `@${user.username}` : user.first_name;
-    ctx.replyWithMarkdown(`*Hey, ${userName} 🫸🫷!*
-    
-*Welcome to Fire Farm* 🎉
-Start Your Journey and Earn 🔥
-    
-    🌟 Grab Daily Rewards 
-    🎰 Spin the Fortune Wheel
-    🧟 Share with your buddies 
-    🚀 Upgrade Your Rank 
+    ctx.replyWithMarkdown(`*Hey, ${userName}!*
+*Welcome to FireFarm* 🎉
+Tap the screen, collect coins, pump up your passive income.
+
+🌟 Grab Daily Rewards 
+🎰 Spin the Fortune Wheel
+🧟 Share with your buddies 
+🚀 Upgrade Your Rank 
     
     `, {
         reply_markup: {
