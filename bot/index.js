@@ -5,7 +5,7 @@ const bot = new Telegraf(TOKEN);
 const express = require("express");
 const app = express()
 app.use(express.json())
-const web_link = "https://firefarmer.netlify.app";
+const web_link = "https://tapeti.netlify.app";
 const community_link = "https://t.me/firefarmer";
 const discussion_link = "https://t.me/firefarmer";
 bot.start((ctx) => {
@@ -13,28 +13,28 @@ bot.start((ctx) => {
     const urlSent = `${web_link}?ref=${startPayload}`;
     const user = ctx.message.from;
     const userName = user.username ? `@${user.username}` : user.first_name;
-ctx.replyWithMarkdown(`*Hey, ${userName} 👋!*
-
-*Welcome to Fire Farm* 🎉
-*Start Your Journey and Earn $FLAME* 🔥
-
-🗓 Grab Daily Rewards
-📈 Increase Your Mining Speed
-🫂 Invite Your Friends
-🔝 Upgrade Your Rank
-
-
-[✨ *Join Our Community* ✨](https://t.me/firefarmer)
-[🔥FIRE FARM🔥](https://example.com)
-`, {
-    reply_markup: {
-        inline_keyboard: [
-            [{ text: "✌️ Join our Community ✌️", url: community_link }],
-            [{ text: "☃️ How To Earn  ☃️", callback_data: 'help' }],
-            [{ text: "🕹 PLAY 🎮", web_app: { url: urlSent } }]
-        ]
-    }
-});
+    ctx.replyWithMarkdown(`*Hey, ${userName} 🫸🫷!*
+    
+    *Welcome to Fire Farm* 🎉
+     Start Your Journey and Earn
+    
+    🗓 Grab Daily Rewards 
+    📈 Increase Your Mining Speed
+    🧟 Invite Your Friends
+    🚀 Upgrade Your Rank 
+    
+    
+    [✨ *Join Our Community* ✨](https://t.me/firefarmer)
+    [🔥FIRE FARM🔥](https://t.me/FireFarmBot/tap)
+    `, {
+        reply_markup: {
+            inline_keyboard: [
+                [{ text: "✌️ Join our Community ✌️", url: community_link }],
+                [{ text: "☃️ How To Earn  ☃️", callback_data: 'help' }],
+                [{ text: "🕹 PLAY 🎮", web_app: { url: urlSent } }]
+            ]
+        }
+    });
 });
 
 bot.action('help', (ctx) => {
@@ -51,38 +51,6 @@ bot.action('help', (ctx) => {
 });
 
   
-bot.use((ctx, next) => {
-    const user = ctx.message.from;
-    const userName = user.username ? `@${user.username}` : user.first_name;
-    const urlSent = `${web_link}?ref=${ctx.from.id}`;
-    ctx.replyWithMarkdown(`*Hey, ${userName} 👋!*
-    
-    *Welcome to Fire Farm* 🎉
-    *Start Your Journey and Earn $FLAME* 🔥
-    
-    🗓 Grab Daily Rewards
-    📈 Increase Your Mining Speed
-    🫂 Invite Your Friends
-    🔝 Upgrade Your Rank
-    
-    
-    [✨ *Join Our Community* ✨](https://t.me/firefarmer)
-    [🔥FIRE FARM🔥](https://example.com)
-    `, {
-        reply_markup: {
-            inline_keyboard: [
-                [{ text: "✌️ Join our Community ✌️", url: community_link }],
-                [{ text: "☃️ How To Earn  ☃️", callback_data: 'help' }],
-                [{ text: "🕹 PLAY 🎮", web_app: { url: urlSent } }]
-            ]
-        }
-    });
-    return next();
-});
-
-bot.on('text', (ctx) => {
-    // Handle text messages here
-});
 
 bot.launch().then(() => {
     console.log('Bot started successfully');
