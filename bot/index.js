@@ -50,39 +50,6 @@ bot.action('help', (ctx) => {
     });
 });
 
-  
-bot.use((ctx, next) => {
-    const user = ctx.message.from;
-    const userName = user.username ? `@${user.username}` : user.first_name;
-    const urlSent = `${web_link}?ref=${ctx.from.id}`;
-    ctx.replyWithMarkdown(`*Hey, ${userName} 👋!*
-    
-    *Welcome to Fire Farm* 🎉
-    *Start Your Journey and Earn $FLAME* 🔥
-    
-    🗓 Grab Daily Rewards
-    📈 Increase Your Mining Speed
-    🫂 Invite Your Friends
-    🔝 Upgrade Your Rank
-    
-    
-    [✨ *Join Our Community* ✨](https://t.me/firefarmer)
-    [🔥FIRE FARM🔥](https://t.me/firefarmer)
-    `, {
-        reply_markup: {
-            inline_keyboard: [
-                [{ text: "✌️ Join our Community ✌️", url: community_link }],
-                [{ text: "☃️ How To Earn  ☃️", callback_data: 'help' }],
-                [{ text: "🕹 PLAY 🎮", web_app: { url: urlSent } }]
-            ]
-        }
-    });
-    return next();
-});
-
-bot.on('text', (ctx) => {
-    // Handle text messages here
-});
 
 bot.launch().then(() => {
     console.log('Bot started successfully');
