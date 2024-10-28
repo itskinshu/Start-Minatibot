@@ -1,35 +1,40 @@
 const { Telegraf, Markup } = require("telegraf");
-const TOKEN = "7590130606:AAEd10YmE3f7M4-mKJWJLv2mCCVtLRuGS54";
+require('dotenv').config();
+const TOKEN = process.env.BOT_TOKEN;
 const bot = new Telegraf(TOKEN);
 const express = require("express");
 const app = express()
 app.use(express.json())
-const web_link = "https://tapediti.netlify.app/";
-const community_link = "https://t.me/kissudev";
-const discussion_link = "https://t.me/kissudev";
-
+const web_link = "https://firefarmer.netlify.app";
+const community_link = "https://t.me/firefarmer";
+const discussion_link = "https://t.me/firefarmer";
 bot.start((ctx) => {
     const startPayload = ctx.startPayload;
     const urlSent = `${web_link}?ref=${startPayload}`;
     const user = ctx.message.from;
     const userName = user.username ? `@${user.username}` : user.first_name;
-    ctx.replyWithMarkdown(`*Hey, ${userName}💞🌟!*
+ctx.replyWithMarkdown(`*Hey, ${userName} 👋!*
 
-*Welcome to Pallava Empire!🥳*
+*Welcome to Fire Farm* 🎉
+*Start Your Journey and Earn $FLAME* 🔥
 
-You have the opportunity to build a new empire and make real money!💰
+🗓 Grab Daily Rewards
+📈 Increase Your Mining Speed
+🫂 Invite Your Friends
+🔝 Upgrade Your Rank
 
-Invite friends to compete, join lotteries, and level up faster!🚀.`, {
-        reply_markup: {
-            inline_keyboard: [
-              [{ text: "✌️ Join our Community ✌️", url: community_link }],
-              [{ text: "☃️ How To Earn  ☃️", callback_data: 'help' }],
-              [{ text: "💫 Pallava V-2 💫", web_app: { url: urlSent } }]
-               ]
-            
 
-        },
-    });
+[✨ *Join Our Community* ✨](https://t.me/firefarmer)
+[🔥FIRE FARM🔥](https://example.com)
+`, {
+    reply_markup: {
+        inline_keyboard: [
+            [{ text: "✌️ Join our Community ✌️", url: community_link }],
+            [{ text: "☃️ How To Earn  ☃️", callback_data: 'help' }],
+            [{ text: "🕹 PLAY 🎮", web_app: { url: urlSent } }]
+        ]
+    }
+});
 });
 
 bot.action('help', (ctx) => {
@@ -45,8 +50,46 @@ bot.action('help', (ctx) => {
     });
 });
 
-bot.launch();
   
-app.listen(3001, () => {
-    console.log("server is me and now running")
-})
+bot.use((ctx, next) => {
+    const user = ctx.message.from;
+    const userName = user.username ? `@${user.username}` : user.first_name;
+    const urlSent = `${web_link}?ref=${ctx.from.id}`;
+    ctx.replyWithMarkdown(`*Hey, ${userName} 👋!*
+    
+    *Welcome to Fire Farm* 🎉
+    *Start Your Journey and Earn $FLAME* 🔥
+    
+    🗓 Grab Daily Rewards
+    📈 Increase Your Mining Speed
+    🫂 Invite Your Friends
+    🔝 Upgrade Your Rank
+    
+    
+    [✨ *Join Our Community* ✨](https://t.me/firefarmer)
+    [🔥FIRE FARM🔥](https://example.com)
+    `, {
+        reply_markup: {
+            inline_keyboard: [
+                [{ text: "✌️ Join our Community ✌️", url: community_link }],
+                [{ text: "☃️ How To Earn  ☃️", callback_data: 'help' }],
+                [{ text: "🕹 PLAY 🎮", web_app: { url: urlSent } }]
+            ]
+        }
+    });
+    return next();
+});
+
+bot.on('text', (ctx) => {
+    // Handle text messages here
+});
+
+bot.launch().then(() => {
+    console.log('Bot started successfully');
+}).catch((err) => {
+    console.error('Error starting bot:', err);
+});
+  
+app.listen(3005, () => {
+    console.log("server is me and now running");
+});
