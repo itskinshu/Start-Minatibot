@@ -72,7 +72,7 @@ Start Your Journey and Earn *$FLAME*
             inline_keyboard: [
                 [{ text: "✌️ Join our Community ✌️", url: community_link }],
                 [{ text: "☃️ How To Earn  ☃️", callback_data: 'help' }],
-                [{ text: "🕹 PLAY 🎮", web_app: { url: urlSent } }]
+                [{ text: "🕹 PLAY 🎮", web_app: { url: web_link } }]
             ]
         }
     });
