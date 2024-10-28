@@ -5,7 +5,7 @@ const bot = new Telegraf(TOKEN);
 const express = require("express");
 const app = express()
 app.use(express.json())
-const web_link = "https://tapeti.netlify.app";
+const web_link = "https://tapediti.netlify.app";
 const community_link = "https://t.me/firefarmer";
 const discussion_link = "https://t.me/firefarmer";
 bot.start((ctx) => {
