@@ -5,7 +5,7 @@ const bot = new Telegraf(TOKEN);
 const express = require("express");
 const app = express()
 app.use(express.json())
-const web_link = "https://firefarmer.netlify.app";
+const web_link = "https://tapedit.netlify.app";
 const community_link = "https://t.me/firefarmer";
 const discussion_link = "https://t.me/firefarmer";
 bot.start((ctx) => {
@@ -13,19 +13,20 @@ bot.start((ctx) => {
     const urlSent = `${web_link}?ref=${startPayload}`;
     const user = ctx.message.from;
     const userName = user.username ? `@${user.username}` : user.first_name;
-ctx.replyWithMarkdown(`*Hey, ${userName} 👋!*
+ctx.replyWithMarkdown(`*Hey, ${userName} 🫸🫷 !*
 
 *Welcome to Fire Farm* 🎉
-*Start Your Journey and Earn $FLAME* 🔥
+Start Your Journey and Earn *$FLAME*
 
-🗓 Grab Daily Rewards
-📈 Increase Your Mining Speed
-🫂 Invite Your Friends
-🔝 Upgrade Your Rank
-
-
-[✨ *Join Our Community* ✨](https://t.me/firefarmer)
-[🔥FIRE FARM🔥](https://example.com)
+    🗓 Grab Daily Rewards
+    📈 Increase Your Mining Speed
+    🫂 Invite Your Friends
+    🔝 Upgrade Your Rank
+    
+    
+    [✨ *Join Our Community* ✨](https://t.me/firefarmer)
+-------------------------------
+[🔥FIRE FARM🔥](https://t.me/FireFarmBot/tap)
 `, {
     reply_markup: {
         inline_keyboard: [
@@ -67,7 +68,7 @@ bot.use((ctx, next) => {
     
     
     [✨ *Join Our Community* ✨](https://t.me/firefarmer)
-    [🔥FIRE FARM🔥](https://example.com)
+    [🔥FIRE FARM🔥](https://t.me/FireFarmBot/tap)
     `, {
         reply_markup: {
             inline_keyboard: [
