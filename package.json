@@ -10,9 +10,9 @@
     "@tonconnect/ui-react": "^2.0.6",
     "axios": "^1.7.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
+    "dotenv": "^10.0.0",
     "env": "^0.0.2",
-    "express": "^4.19.2",
+    "express": "^4.17.1",
     "firebase": "^10.12.2",
     "framer-motion": "^11.2.10",
     "moment": "^2.30.1",
@@ -34,7 +34,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-"start": "node bot/index.js",
+    "start": "node bot/index.js",
     "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

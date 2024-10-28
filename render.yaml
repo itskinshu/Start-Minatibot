@@ -1,11 +1,12 @@
 
 services:
   - type: web
-    name: startcommand-bot
+    name: telegram-bot
     env: node
-    plan: free
-    buildCommand: 'npm install'
-    startCommand: 'node bot/index.js'
+    buildCommand: npm install
+    startCommand: node bot/index.js
     envVars:
       - key: BOT_TOKEN
-        value: ${{ BOT_TOKEN }}
+        sync: false
+      - key: WEBHOOK_URL
+        sync: false
