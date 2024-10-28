@@ -25,7 +25,7 @@ ctx.replyWithMarkdown(`*Hey, ${userName} 👋!*
 
 
 [✨ *Join Our Community* ✨](https://t.me/firefarmer)
-[🔥FIRE FARM🔥](https://example.com)
+[🔥FIRE FARM🔥](https://t.me/firefarmer)
 `, {
     reply_markup: {
         inline_keyboard: [
@@ -67,7 +67,7 @@ bot.use((ctx, next) => {
     
     
     [✨ *Join Our Community* ✨](https://t.me/firefarmer)
-    [🔥FIRE FARM🔥](https://example.com)
+    [🔥FIRE FARM🔥](https://t.me/firefarmer)
     `, {
         reply_markup: {
             inline_keyboard: [
