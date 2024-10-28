@@ -1,7 +1,7 @@
 
 # Telegram Bot - Fire Farm
 
-This is a Telegram bot for the Fire Farm game.
+This is a Telegram bot for the Fire Farm game, built with Node.js and Telegraf.
 
 ## Deployment
 
@@ -11,9 +11,9 @@ Choose one of the following platforms to deploy the bot:
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/Start-Farm)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/itskinshu/Start-Farm)
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/yourusername/Start-Farm&branch=main&name=telegram-bot)
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/itskinshu/Start-Farm&branch=main&name=telegram-bot)
 
 ## Setup
 

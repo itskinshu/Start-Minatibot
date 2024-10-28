@@ -4,17 +4,12 @@ service:
   name: telegram-bot
   ports:
     - port: 3000
-      http_options:
-        rewrite_http_to_https: true
   routes:
     - path: /
       public: true
-  instance_type: nano
-  environment:
-    - key: NODE_ENV
+  env:
+    - name: NODE_ENV
       value: production
-  build:
-    builder: dockerfile
-    buildCommand: npm install
-  run:
-    command: node bot/index.js
+  commands:
+    - npm install
+    - npm start
