@@ -1,0 +1,11 @@
+
+services:
+  - type: web
+    name: startcommand-bot
+    env: node
+    plan: free
+    buildCommand: 'npm install'
+    startCommand: 'node bot/index.js'
+    envVars:
+      - key: BOT_TOKEN
+        value: ${{ BOT_TOKEN }}
