@@ -38,7 +38,7 @@ pump up your passive income. 🚀
 
 bot.action('help', (ctx) => {
     const urlSent = `${web_link}?ref=${ctx.from.id}`;
-    ctx.reply('*What\'s the goal?*\n\nEarn Tokens, upgrade Skills, Refer To Friena, and invest! AirDrop is coming soon...👀\n\n🔵Earn\nTap the screen to mine coins. You can never have too many!\n\n🔝Improve\nUpgrade your Skills and it\'s business to increase passive income and boost your level!\n\n📈Profit per hour\nEarn for many hours while you are not in the game.\n\n👥Friends\nInvite friends to Grow empires together! You will earn bonuses for invited friends and their achievements in the game.\n\n⚡️Negotiations\nCompete with players and win coins!\n\n📋Tasks\nComplete simple tasks every day and receive rewards!\n\n🏛Stock Exchange\nInvest your coins in various funds to achieve super returns! However, remember that you can either make a profit or lose your deposit.', {
+    ctx.reply('What\'s the goal?\n\nEarn Tokens, upgrade Skills, Refer To Friena, and invest! AirDrop is coming soon...👀\n\n🔵Earn\nTap the screen to mine coins. You can never have too many!\n\n🔝Improve\nUpgrade your Skills and it\'s business to increase passive income and boost your level!\n\n📈Profit per hour\nEarn for many hours while you are not in the game.\n\n👥Friends\nInvite friends to Grow empires together! You will earn bonuses for invited friends and their achievements in the game.\n\n⚡️Negotiations\nCompete with players and win coins!\n\n📋Tasks\nComplete simple tasks every day and receive rewards!\n\n🏛Stock Exchange\nInvest your coins in various funds to achieve super returns! However, remember that you can either make a profit or lose your deposit.', {
         reply_markup: {
             inline_keyboard: [
                 [{ text: "Join our Community", url: community_link }],
@@ -51,6 +51,7 @@ bot.action('help', (ctx) => {
 
   
 bot.use((ctx, next) => {
+    const urlSent = `${web_link}?ref=${ctx.from.id}`;
     const user = ctx.message.from;
     const userName = user.username ? `@${user.username}` : user.first_name;
 ctx.replyWithMarkdown(`*Hey, ${userName}🫰!*
@@ -70,7 +71,7 @@ pump up your passive income. 🚀
             inline_keyboard: [
                 [{ text: " Join our Community ", url: community_link }],
                 [{ text: "🐥 How To Earn  🐥", callback_data: 'help' }],
-                [{ text: "🕹 Open App 🎮", web_app: { url: web_link } }]
+                [{ text: "🕹 Open App 🎮", web_app: { url: urlsent } }]
             ]
         }
     });
