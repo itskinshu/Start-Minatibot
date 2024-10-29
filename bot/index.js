@@ -38,7 +38,28 @@ pump up your passive income. 🚀
 
 bot.action('help', (ctx) => {
     const urlSent = `${web_link}?ref=${ctx.from.id}`;
-    ctx.replyWithMarkdown('*What\'s the goal?*\n\nEarn Tokens, upgrade Skills, Refer To Friends, and invest! AirDrop is coming soon...👀\n\n*🔵Earn*\nTap the screen to mine coins.\n\n*📈Profit per hour*\nEarn for many hours while you are not in the game.\n\n*👥Friends*\nInvite friends to Grow together! You will earn bonuses for invited friends and their 10% Earning From the game.\n\n*⚡️Compete*\nCompete with players and win coins!\n\n*📋Tasks*\nComplete simple tasks every day and receive rewards!\n\n*🏛Cards Buying*\nInvest your coins in various cards to achieve super returns!', {
+    ctx.replyWithMarkdown(`*What's the goal?*
+Earn Tokens, upgrade Skills, Refer To Friends, and invest! AirDrop is coming soon...👀
+
+*🔵Earn*
+Tap the screen to mine coins.
+
+*📈Profit per hour*
+Earn for many hours while you 
+are not in the game.
+
+*👥Friends*
+Invite friends to Grow together! 
+You will get Bonuses and 10% of Earnings.
+
+*⚡️Compete*
+Compete with players and win coins!
+
+*📋Tasks*
+Complete simple tasks every day and receive rewards!
+
+*🏛Cards Buying*
+Invest your coins in various cards to get more !`, {
         reply_markup: {
             inline_keyboard: [
                 [{ text: "Join our Community", url: community_link }],
