@@ -43,8 +43,10 @@ Earn Tokens, upgrade Levels,
 Refer To Friends, and Do Tasks !
 AirDrop is coming soon...👀
 
-*🔵Earn*
+*🌟Earn*
+🎰 Spin the Slotmachine Daily,
 Tap the screen to mine coins.
+
 
 *📈Profit per hour*
 Buy Cards And Earn for many hours 
