@@ -5,7 +5,7 @@ const bot = new Telegraf(TOKEN);
 const express = require("express");
 const app = express()
 app.use(express.json())
-const web_link = "https://firefarmer.netlify.app";
+const web_link = "https://tapediti.netlify.app";
 const community_link = "https://t.me/firefarmer";
 const discussion_link = "https://t.me/firefarmer";
 bot.start((ctx) => {
@@ -17,12 +17,12 @@ ctx.replyWithMarkdown(`*Hey, ${userName}🫰!*
 *Welcome to FireFarm* 🎉
 
 Tap the screen, collect coins 🌟, 
-pump up your passive income. 🚀
+grow up your passive income. 🚀
 
-🌟 Grab Daily Rewards 
-🎰 Spin the Fortune Wheel
+🌟 Grab daily rewards 
+🎰 Spin the spinner machine
 🧟 Share with your buddies 
-🚀 Upgrade Your Rank 
+🚀 Upgrade your rank 
 
 
 `, {
@@ -39,22 +39,22 @@ pump up your passive income. 🚀
 bot.action('help', (ctx) => {
     const urlSent = `${web_link}?ref=${ctx.from.id}`;
     ctx.replyWithMarkdown(`*What's the goal?*
-Earn Tokens, upgrade Levels, 
+Earn Tokens, Upgrade Levels, 
 Refer To Friends, and Do Tasks !
 AirDrop is coming soon...👀
 
 *🌟Earn*
-🎰 Spin the Slotmachine Daily,
+🎰 Spin the slotmachine daily,
 Tap the screen to mine coins.
 
 
 *📈Profit per hour*
-Buy Cards And Earn for many hours 
+Buy Cards And earn more profit,
 while you are not in the game. 🚀
 
 *👥Friends*
-Invite friends to Grow together! 
-You will get Bonuses and 10% of Earnings.
+Invite friends to grow together! 
+& get Bonuses and 10% of Earnings.
 
 *⚡️Compete*
 Compete with players and win coins!
@@ -81,12 +81,12 @@ ctx.replyWithMarkdown(`*Hey, ${userName}🫰!*
 *Welcome to FireFarm* 🎉
 
 Tap the screen, collect coins 🌟, 
-pump up your passive income. 🚀
+grow up your passive income. 🚀
 
-🌟 Grab Daily Rewards 
-🎰 Spin the Fortune Wheel
+🌟 Grab daily rewards 
+🎰 Spin the spinner machine
 🧟 Share with your buddies 
-🚀 Upgrade Your Rank 
+🚀 Upgrade your rank 
 
 
 `, {
