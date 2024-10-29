@@ -39,8 +39,9 @@ pump up your passive income. 🚀
 bot.action('help', (ctx) => {
     const urlSent = `${web_link}?ref=${ctx.from.id}`;
     ctx.replyWithMarkdown(`*What's the goal?*
-Earn Tokens, upgrade Levels, Refer To Friends, and
-Do Tasks ! AirDrop is coming soon...👀
+Earn Tokens, upgrade Levels, 
+Refer To Friends, and Do Tasks !
+AirDrop is coming soon...👀
 
 *🔵Earn*
 Tap the screen to mine coins.
