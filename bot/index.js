@@ -39,8 +39,8 @@ grow up your passive income. 🚀
 bot.action('help', (ctx) => {
     const urlSent = `${web_link}?ref=${ctx.from.id}`;
     ctx.replyWithMarkdown(`*What's the goal?*
-Earn Tokens, Upgrade Levels, 
-Refer To Friends, and Do Tasks !
+Earn Tokens,Upgrade Levels, 
+Refer To Friends and Do Tasks !
 AirDrop is coming soon...👀
 
 *🌟Earn*
@@ -50,14 +50,11 @@ Tap the screen to mine coins.
 
 *📈Profit per hour*
 Buy Cards And earn more profit,
-while you are not in the game. 🚀
+while you are not in the game. 
 
 *👥Friends*
 Invite friends to grow together! 
-& get Bonuses and 10% of Earnings.
-
-*⚡️Compete*
-Compete with players and win coins!
+get Bonuses and 10% of Earnings.
 
 *📋Tasks*
 Complete simple tasks every day 
