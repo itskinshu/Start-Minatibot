@@ -51,7 +51,6 @@ bot.action('help', (ctx) => {
 
   
 bot.use((ctx, next) => {
-    const urlSent = `${web_link}?ref=${ctx.from.id}`;
     const user = ctx.message.from;
     const userName = user.username ? `@${user.username}` : user.first_name;
 ctx.replyWithMarkdown(`*Hey, ${userName}🫰!*
@@ -71,7 +70,7 @@ pump up your passive income. 🚀
             inline_keyboard: [
                 [{ text: " Join our Community ", url: community_link }],
                 [{ text: "🐥 How To Earn  🐥", callback_data: 'help' }],
-                [{ text: "🕹 Open App 🎮", web_app: { url: urlsent } }]
+                [{ text: "🕹 Open App 🎮", web_app: { url: web_link } }]
             ]
         }
     });
