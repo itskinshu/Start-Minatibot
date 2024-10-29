@@ -14,14 +14,13 @@ bot.start((ctx) => {
     const user = ctx.message.from;
     const userName = user.username ? `@${user.username}` : user.first_name;
 ctx.replyWithMarkdown(`*Hey, ${userName} 👋!*
+*Welcome to FireFarm* 🎉
+Tap the screen, collect coins, pump up your passive income.
 
-*Welcome to Fire Farm* 🎉
-Start Your Jo
-
-🗓 Grab Daily Rewards
-📈 Increase Your Mining Speed
-🫂 Invite Your Friends
-🔝 Upgrade Your Rank
+🌟 Grab Daily Rewards 
+🎰 Spin the Fortune Wheel
+🧟 Share with your buddies 
+🚀 Upgrade Your Rank 
 
 
 `, {
