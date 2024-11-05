@@ -5,7 +5,7 @@ const bot = new Telegraf(TOKEN);
 const express = require("express");
 const app = express()
 app.use(express.json())
-const web_link = "https://minati.kissubots.in";
+const web_link = "https://minati-app.netlify.app";
 const community_link = "https://t.me/Minativerseofficial";
 const discussion_link = "https://x.com/minatifi";
 bot.start((ctx) => {
