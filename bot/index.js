@@ -21,12 +21,12 @@ Join our community, complete quests, and earn fantastic rewards while exploring 
 
 Got friends who love innovation? 👥 Invite them to explore Minati together! More friends = More adventures = Greater rewards! 🎉 
 
-🚀 Powered by Minati `, {
+*🚀 Powered by Minati* `, {
     reply_markup: {
         inline_keyboard: [
             [{ text: " Join our Community ", url: community_link }],
             [{ text: " Our Twitter 💫", url: discussion_link }],
-            [{ text: "🕹 Oepn App 🎮", web_app: { url: urlSent } }]
+            [{ text: "🎮 Open App 🎮", web_app: { url: urlSent } }]
         ]
     }
 });
